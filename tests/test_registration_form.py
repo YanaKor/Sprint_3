@@ -1,5 +1,3 @@
-import time
-
 from test_data import data
 
 
