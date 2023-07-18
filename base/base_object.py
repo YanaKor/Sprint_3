@@ -26,14 +26,5 @@ class BaseObject:
     def get_text(self, locator):
         return self.is_visible(locator).text
 
-    def get_url(self):
-        WebDriverWait(self.driver, 3)
-        return self.driver.current_url
-
     def go_to_url(self, url):
         self.driver.get(url)
-
-    def wait_for_smth(self):
-        WebDriverWait(self.driver, 3)
-
-

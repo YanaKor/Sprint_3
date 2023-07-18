@@ -10,15 +10,12 @@ class Constructor(BaseObject, Assertions):
 
     def click_on_bunks_tab(self):
         self.click(Cnstr.BUNKS_TAB)
-        self.wait_for_smth()
 
     def click_on_sauce_tab(self):
         self.click(Cnstr.SAUCES_TAB)
-        self.wait_for_smth()
 
     def click_on_stuffing_tab(self):
         self.click(Cnstr.STUFFING_TAB)
-        self.wait_for_smth()
 
     def check_transition_to_bunks_tab(self):
         self.assert_equal(self.get_text(Cnstr.BUNKS_SECTION), self.get_text(Cnstr.BUNKS_TAB))

@@ -1,6 +1,7 @@
 from base.base_object import BaseObject
 from base.locators import RegistrationLocators as Registr
 from base.locators import PersonalAccountLocators as PA
+from base.locators import LogInFormLocators as LogForm
 from support.assertions import Assertions
 
 
@@ -27,9 +28,8 @@ class RegistrationPage(BaseObject, Assertions):
     def click_on_register_btn(self):
         self.click(Registr.REGISTER_BUTTON)
 
-    def check_url_after_registration(self):
-        self.is_present(PA.HEADER_OF_THE_FORM)
-        self.assert_equal(self.get_url(), 'https://stellarburgers.nomoreparties.site/login')
+    def check_title(self):
+        self.assert_equal(self.get_text(LogForm.LOGIN_BUTTON), 'Войти')
 
     def check_error_message(self):
         self.assert_equal(self.get_text(Registr.ERROR_MESSAGE), 'Некорректный пароль')
