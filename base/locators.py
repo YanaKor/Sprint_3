@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-
+BASE_URL = 'https://stellarburgers.nomoreparties.site'
 class RegistrationLocators:
     SIGN_IN_BUTTON = (By.XPATH, ".//button[contains(text(), 'Войти в аккаунт')]")  # Кнопка войти в аккаунт
     REGISTER_LINK = (By.XPATH, ".//a[contains(text(), 'Зарегистрироваться')]")  # Ссылка регистрации на сайте

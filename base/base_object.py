@@ -17,7 +17,7 @@ class BaseObject:
     def is_clickable(self, locator):
         return self.wait.until(ec.element_to_be_clickable(locator))
 
-    def type(self, locator, text):
+    def fill_field(self, locator, text):
         self.is_visible(locator).send_keys(text)
 
     def click(self, locator):

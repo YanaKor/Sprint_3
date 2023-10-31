@@ -1,8 +1,15 @@
+import allure
+
 from test_data import data
 from pages.login_page import LoginPage
 
 
 class TestLoginPage:
+    @allure.suite('Authorization suite')
+    @allure.title('Successful login')
+    @allure.description('Login from main page')
+    @allure.label('owner', 'Yana')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_login_from_main_page(self, driver):
         login_page = LoginPage(driver)
 
@@ -12,6 +19,11 @@ class TestLoginPage:
         login_page.click_on_login_btn()
         login_page.check_text_after_login()
 
+    @allure.suite('Authorization suite')
+    @allure.title('Successful login')
+    @allure.description('Login from personal account')
+    @allure.label('owner', 'Yana')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_login_from_personal_account(self, driver):
         login_page = LoginPage(driver)
 
@@ -21,6 +33,11 @@ class TestLoginPage:
         login_page.click_on_login_btn()
         login_page.check_text_after_login()
 
+    @allure.suite('Authorization suite')
+    @allure.title('Successful login')
+    @allure.description('Login from registration form')
+    @allure.label('owner', 'Yana')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_login_from_registration_form(self, driver):
         login_page = LoginPage(driver)
 
@@ -31,6 +48,11 @@ class TestLoginPage:
         login_page.click_on_login_btn()
         login_page.check_text_after_login()
 
+    @allure.suite('Authorization suite')
+    @allure.title('Successful login')
+    @allure.description('Login from recovery form')
+    @allure.label('owner', 'Yana')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_login_from_recovery_form(self, driver):
         login_page = LoginPage(driver)
 
