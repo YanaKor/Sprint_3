@@ -7,6 +7,3 @@ password = 'Practicum11'
 
 new_user_name = 'Yana'
 new_user_email = f'yana_kormshchikova_2{random.randint(100, 999)}@yandex.ru'
-
-
-print(new_user_email)

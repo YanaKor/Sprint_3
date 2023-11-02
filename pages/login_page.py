@@ -1,7 +1,7 @@
 import allure
 
 from base.base_object import BaseObject
-from base.locators import LogInFormLocators as Login, BASE_URL
+from base.locators import LogInFormLocators as Login, Urls
 from support.assertions import Assertions
 
 
@@ -20,7 +20,7 @@ class LoginPage(BaseObject, Assertions):
 
     @allure.step('Opening the registration form')
     def open_registration_form(self):
-        self.go_to_url(f'{BASE_URL}/register')
+        self.go_to_url(Urls.REGISTRATION_FORM_URL)
 
     @allure.step('Clicking on login button on registration/recovery form')
     def click_on_login_btn_on_register_and_recovery_form(self):
@@ -28,7 +28,7 @@ class LoginPage(BaseObject, Assertions):
 
     @allure.step('Opening recovery form')
     def open_recovery_form(self):
-        self.go_to_url(f'{BASE_URL}/forgot-password')
+        self.go_to_url(Urls.RECOVERY_FORM_URL)
 
     @allure.step('Fill email')
     def enter_email_on_login_page(self, email):

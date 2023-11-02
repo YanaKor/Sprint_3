@@ -1,6 +1,12 @@
 from selenium.webdriver.common.by import By
 
-BASE_URL = 'https://stellarburgers.nomoreparties.site'
+
+class Urls:
+    BASE_URL = 'https://stellarburgers.nomoreparties.site'
+    REGISTRATION_FORM_URL = f'{BASE_URL}/register'
+    RECOVERY_FORM_URL = f'{BASE_URL}/forgot-password'
+
+
 class RegistrationLocators:
     SIGN_IN_BUTTON = (By.XPATH, ".//button[contains(text(), 'Войти в аккаунт')]")  # Кнопка войти в аккаунт
     REGISTER_LINK = (By.XPATH, ".//a[contains(text(), 'Зарегистрироваться')]")  # Ссылка регистрации на сайте
@@ -14,12 +20,14 @@ class RegistrationLocators:
 
 class LogInFormLocators:
     LOGIN_BUTTON_ON_MAIN_PAGE = (
-    By.XPATH, ".//button[contains(text(), 'Войти в аккаунт')]")  # Кнопка войти в аккаунт на главной странице
+        By.XPATH, ".//button[contains(text(), 'Войти в аккаунт')]")  # Кнопка войти в аккаунт на главной странице
     LOGIN_EMAIL_FIELD = (By.XPATH, ".//form//input[@name='name']")  # Поле ввода email на странице входа
     LOGIN_PASSWORD_FIELD = (By.XPATH, ".//form//input[@type='password']")  # Поле ввода пароля на странице входа
     LOGIN_BUTTON = (By.XPATH, ".//form//button[contains(text(), 'Войти')]")  # Кнопка "Войти" в форме
-    HEADER_ON_MAIN_PAGE = (By.XPATH, ".//main//h1[contains(text(), 'Соберите бургер')]")  # проверка текста "Соберите бургер" после входа в ЛК
-    PERSONAL_ACCOUNT_BUTTON = (By.XPATH, ".//nav//p[contains(text(), 'Личный Кабинет')]")  # вход через кнопку «Личный кабинет»
+    HEADER_ON_MAIN_PAGE = (
+    By.XPATH, ".//main//h1[contains(text(), 'Соберите бургер')]")  # проверка текста "Соберите бургер" после входа в ЛК
+    PERSONAL_ACCOUNT_BUTTON = (
+    By.XPATH, ".//nav//p[contains(text(), 'Личный Кабинет')]")  # вход через кнопку «Личный кабинет»
     LOGIN_BUTTON_FROM_REGISTER_AND_RECOVERY_PAGE = (By.XPATH,
                                                     ".//main//a[contains(text(), 'Войти')]")  # вход через кнопку в форме регистрации и в форме восстановления пароля
 

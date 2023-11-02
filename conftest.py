@@ -1,18 +1,14 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options as ChromeOptions
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from base.locators import BASE_URL
+
+from base.locators import Urls
 
 
 @pytest.fixture
 def driver():
-    options = ChromeOptions()
-    options.add_argument('chrome')
-    driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
-    # driver = webdriver.Chrome()
-    driver.get('https://stellarburgers.nomoreparties.site')
-    # driver.get(BASE_URL)
+    driver = webdriver.Chrome()
+    driver.get(Urls.BASE_URL)
+
     yield driver
+
     driver.quit()
