@@ -3,3 +3,4 @@
 2. Установить зависимости — pip install -r requirements.txt.
 3. Команда для запуска тестов — pytest . 
 4. Для формирования отчета в формате веб-страницы: allure serve allure-results
+
